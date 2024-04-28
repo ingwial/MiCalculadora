@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/calc.horizontal.margin"
+    android:paddingRight="@dimen/calc.horizontal.margin"
+    android:paddingTop="@dimen/calc.horizontal.margin"
+    android:paddingBottom="@dimen/calc.horizontal.margin"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilInput"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calc.input.height">
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/calc.hint.input"
+            android:gravity="end|center_vertical"
+            android:inputType="none"
+            android:textIsSelectable="true"
+            android:maxLength="16"
+            android:drawablePadding="16dp"
+            android:drawableEnd="@drawable/ic_backspace_back_36dp">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/llMainLeftInput"
+        android:layout_width="@dimen/calc.btn.size"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tilInput">
+
+        <Button
+            android:id="@+id/btnSiete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.seven"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnCuatro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.cuatro"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnUno"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.uno"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnPunto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.punto"
+            android:theme="@style/ButtonMDDark">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMainRigth"
+        android:layout_width="@dimen/calc.btn.size"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tilInput"
+        android:layout_toEndOf="@id/llMainLeftInput">
+
+        <Button
+            android:id="@+id/btnOcho"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.ocho"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnCinco"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.cinco"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnDos"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.dos"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+        <Button
+            android:id="@+id/btnCero"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.cero"
+            android:theme="@style/ButtonMD">
+        </Button>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOperadores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tilInput"
+        android:layout_toEndOf="@id/llMainRigth">
+
+        <Button
+            android:id="@+id/btnNueve"
+            android:layout_width="@dimen/calc.btn.size"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.nueve"
+            android:theme="@style/ButtonMD"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+        </Button>
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc.btn.size"
+            android:text="@string/calc.btn.limpiar"
+            android:theme="@style/ButtonMDDanger"
+            android:layout_toEndOf="@id/btnNueve">
+        </Button>
+
+        <LinearLayout
+            android:id="@+id/llMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/btnNueve">
+
+            <Button
+                android:id="@+id/btnSeis"
+                android:layout_width="@dimen/calc.btn.size"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.seis"
+                android:theme="@style/ButtonMD">
+            </Button>
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.between"
+                android:theme="@style/ButtonMDDark">
+            </Button>
+
+            <Button
+                android:id="@+id/btnMultiplicacion"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.multi"
+                android:theme="@style/ButtonMDDark"
+                android:textAllCaps="false">
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llMiddle">
+
+            <Button
+                android:id="@+id/btnTres"
+                android:layout_width="@dimen/calc.btn.size"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.tres"
+                android:theme="@style/ButtonMD">
+            </Button>
+
+            <Button
+                android:id="@+id/btnSub"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.sub"
+                android:theme="@style/ButtonMDDark">
+            </Button>
+
+            <Button
+                android:id="@+id/btnSum"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="@dimen/calc.btn.size"
+                android:text="@string/calc.btn.sum"
+                android:theme="@style/ButtonMDDark">
+            </Button>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnResultado"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calc.btn.size"
+        android:theme="@style/ButtonMDDarker"
+        android:layout_below="@+id/rlOperadores"
+        android:layout_toEndOf="@id/llMainRigth"
+        android:text="@string/calc.btn.resultado">
+    </Button>
+
+
+</RelativeLayout>
